@@ -1,0 +1,133 @@
+DROP DATABASE  LIBRARY_MANAGMENT;
+
+CREATE DATABASE LIBRARY_MANAGMENT;
+
+USE LIBRARY_MANAGMENT;
+
+create table Registration
+(Student_Name varchar(88) unique,Student_Class integer,Section char(1),Phone_No long );
+
+INSERT INTO REGISTRATION
+VALUES('Mayank',12,'A',7578286111);
+
+INSERT INTO REGISTRATION
+VALUES('Rahul',12,'A',9893303393);
+
+INSERT INTO REGISTRATION
+VALUES('Aashish',12,'A',8109841220);
+
+INSERT INTO REGISTRATION
+VALUES('Prasant',12,'A',7415695742);
+
+create table book
+(Book_Name varchar(56),Book_Class integer,Book_No long,Pages long,Author varchar(55),Eddition long);
+
+DESCRIBE BOOK;
+
+INSERT INTO BOOK
+VALUES
+('Chemistry',12,767,564,'S Chand',2009);
+
+INSERT INTO BOOK
+VALUES
+('Informatics practices',11,766,684,'Sumita Arora',2009);
+
+INSERT INTO BOOK
+VALUES('English ',11,560,941,'Golden',2006);
+
+INSERT INTO BOOK
+VALUES('Maths',12,126,1354,'N.D.',2006);
+
+create table issuedbook
+(S_Name varchar(88),S_Class integer,Section char(1),Phone_No long,Book_Name varchar(56),Book_Class integer,Book_No long,Pages long,Author varchar(55),Eddition long,b_i_o_d date);
+
+insert into issuedbook
+values('Pavan rai',12,'A',9893903493,'Mathematics',12,765,1290,'R D Sharma',2009,'2010-12-06');
+
+insert into issuedbook
+values('Atul Ban',12,'A',9630446446,'Physics',12,766,1291,'Pradeep',2006,'2010-12-08');
+
+insert into issuedbook
+values('Palash ',12,'A',8109842956,'Maths',12,466,1091,'Manjeet Singh',2009,'2010-11-23');
+
+insert into issuedbook
+values('Puneet ',9,'A',9770852125,'Science',9,465,1391,'A.B.C Modern',2009,'2010-10-19');
+
+create table publicregistration
+(Name varchar(43) unique ,Phone_No long);
+
+insert into publicregistration
+values ('Anurag','9893334587');
+
+insert into publicregistration
+values ('Sashank','8109334532');
+
+insert into publicregistration
+values ('Amar','9893365863');
+
+insert into publicregistration
+values ('Yash','8109458734');
+
+insert into publicregistration
+values ('Rahul Dhimole','9993041050');
+
+CREATE TABLE PUBLICAVAILABLEBOOK
+(Book_Name varchar(65),Book_NO long ,Pages long ,Author varchar(65),Eddition long);
+
+insert into publicavailablebook
+values('General Knowledge',456,664,'Lucent',2006);
+
+insert into publicavailablebook
+values('OutLook',436,80,'Pankaj',2008);
+
+insert into publicavailablebook
+values('My Mobile ',476,56,'Harish',2009);
+
+insert into publicavailablebook
+values('Sports India',654,165,'Lucent',2010);
+
+create table publicissuedbook
+(Name varchar(43) ,Phone_No long,Book_Name varchar(65),Book_NO long ,Pages long ,Author varchar(65),Eddition long,pdoib Date);
+
+Insert into publicissuedbook
+Values('Mukesh',8109653887,'Cricket book',456,76,'Sonia shrama',2008,'2009-11-23');
+
+Insert into publicissuedbook
+Values('Aakash',8109679834,'Football book',864,154,'Suraj sharma',2009,'2009-11-02');
+
+Insert into publicissuedbook
+Values('Aashish',8109841220,'Hockey book',865,98,'Manmohan singh',2004,'2009-12-12');
+
+Insert into publicissuedbook
+Values('Parivesh',8109867564,'Sports times',765,767,'Vasim ansari',2007,'2009-06-18');
+
+create table sid 
+( nameqq varchar(13),date Integer ,month Integer ,year Integer);
+
+create table publicsid 
+( name varchar(13),date Integer ,month Integer ,year Integer);
+
+insert into SID
+values('Atul Ban','08','12','2010');
+
+insert into SID
+values('Palash ','23','11','2010');
+
+insert into SID
+values('Puneet ','19','10','2010');
+
+insert into  SID
+values('Pavan rai','06','12','2010');
+
+Insert into publicsid
+Values('Mukesh','23','11','2009');
+
+Insert into publicsid
+Values('Aakash','02','11','2009');
+
+Insert into publicsid
+Values('Aashish','12','12','2009');
+
+Insert into publicsid
+Values('Parivesh','18','06','2009');
+ 
